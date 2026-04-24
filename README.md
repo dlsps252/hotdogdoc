@@ -27,9 +27,9 @@
 | 섹션 | API 명칭 | Method | 엔드포인트 | Request Body (JSON) | 비고 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1. 인증** | 회원가입 | `POST` | `/api/auth/signup` | `{"email": "s", "password": "s", "name": "s"}` | |
-| **1. 인증** | 로그인 | `POST` | `/api/auth/login` | `{"email": "s", "password": "s"}` | JWT 발급 |
-| **1. 인증** | 프로필 조회 | `GET` | `/api/members/me` | `(None)` | 마이페이지 |
-| **1. 인증** | 배송지 추가 | `POST` | `/api/members/addresses` | `{"zipCode": "s", "baseAddress": "s", "detailAddress": "s", ...}` | |
+|      | 로그인 | `POST` | `/api/auth/login` | `{"email": "s", "password": "s"}` | JWT 발급 |
+|      | 프로필 조회 | `GET` | `/api/members/me` | `(None)` | 마이페이지 |
+|      | 배송지 추가 | `POST` | `/api/members/addresses` | `{"zipCode": "s", "baseAddress": "s", "detailAddress": "s", ...}` | |
 | **2. 접근성** | 설정 조회 | `GET` | `/api/accessibility` | `(None)` | **개인화 UI 근거** |
 | **2. 접근성** | 설정 업데이트 | `PUT` | `/api/accessibility` | `{"fontSizeStep": n, "highContrastEnabled": b, ...}` | |
 | **3. 상품** | 목록/검색 | `GET` | `/api/products` | `(?category=HEALTH&keyword=s&page=n)` | **맞춤형 큐레이션** |
