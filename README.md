@@ -31,20 +31,20 @@
 |      | 프로필 조회 | `GET` | `/api/members/me` | `(None)` | 마이페이지 |
 |      | 배송지 추가 | `POST` | `/api/members/addresses` | `{"zipCode": "s", "baseAddress": "s", "detailAddress": "s", ...}` | |
 | **2. 접근성** | 설정 조회 | `GET` | `/api/accessibility` | `(None)` | **개인화 UI 근거** |
-| **2. 접근성** | 설정 업데이트 | `PUT` | `/api/accessibility` | `{"fontSizeStep": n, "highContrastEnabled": b, ...}` | |
+|      | 설정 업데이트 | `PUT` | `/api/accessibility` | `{"fontSizeStep": n, "highContrastEnabled": b, ...}` | |
 | **3. 상품** | 목록/검색 | `GET` | `/api/products` | `(?category=HEALTH&keyword=s&page=n)` | **맞춤형 큐레이션** |
-| **3. 상품** | 상세 조회 | `GET` | `/api/products/{id}` | `(None)` | 대체텍스트 포함 |
+|      | 상세 조회 | `GET` | `/api/products/{id}` | `(None)` | 대체텍스트 포함 |
 | **4. 장바구니** | 목록 조회 | `GET` | `/api/carts` | `(None)` | |
-| **4. 장바구니** | 상품 추가 | `POST` | `/api/carts` | `{"productId": n, "quantity": n}` | |
-| **4. 장바구니** | 수량 수정 | `PATCH` | `/api/carts/{id}` | `{"quantity": n}` | |
-| **4. 장바구니** | 상품 삭제 | `DELETE` | `/api/carts/{id}` | `(None)` | |
+|      | 상품 추가 | `POST` | `/api/carts` | `{"productId": n, "quantity": n}` | |
+|      | 수량 수정 | `PATCH` | `/api/carts/{id}` | `{"quantity": n}` | |
+|      | 상품 삭제 | `DELETE` | `/api/carts/{id}` | `(None)` | |
 | **5. 주문** | 주문 생성 | `POST` | `/api/orders` | `{"cartIdList": n[], "addressId": n}` | PENDING 생성 |
-| **5. 주문** | 결제 승인 | `POST` | `/api/payments/confirm` | `{"paymentKey": "s", "orderId": n, "amount": n}` | 토스 연동 |
-| **5. 주문** | 내 주문 내역 | `GET` | `/api/orders` | `(?page=n)` | |
+|      | 결제 승인 | `POST` | `/api/payments/confirm` | `{"paymentKey": "s", "orderId": n, "amount": n}` | 토스 연동 |
+|      | 내 주문 내역 | `GET` | `/api/orders` | `(?page=n)` | |
 | **6. 리뷰** | 리뷰 조회 | `GET` | `/api/reviews` | `(?productId=n)` | |
-| **6. 리뷰** | 리뷰 작성 | `POST` | `/api/reviews` | `{"productId": n, "orderId": n, "rating": n, "content": "s"}` | |
+|      | 리뷰 작성 | `POST` | `/api/reviews` | `{"productId": n, "orderId": n, "rating": n, "content": "s"}` | |
 | **7. 관리자** | 상품 등록/수정 | `POST/PUT` | `/api/admin/products` | `{"name": "s", "price": n, "altText": "s", ...}` | **Admin 전용** |
-| **7. 관리자** | 회원/주문 관리 | `GET/PATCH` | `/api/admin/...` | `{"role": "s", "status": "s"}` | **Admin 전용** |
+|      | 회원/주문 관리 | `GET/PATCH` | `/api/admin/...` | `{"role": "s", "status": "s"}` | **Admin 전용** |
 | **공통** | 이미지 업로드 | `POST` | `/api/common/images` | `(MultipartFile)` | 이미지 서버 저장 |
 
 ---
